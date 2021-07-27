@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 5s # Set the scrape interval to every 5 seconds. Default is every 1 minute.
+  evaluation_interval: 5s # Evaluate rules every 5 seconds. The default is every 1 minute.
+
+scrape_configs:
+# Make Prometheus scrape itself for metrics.
+- job_name: "prometheus"
+  scheme: https
+  basic_auth:
+    username: prometheus
+    password_file: "${EP_SECRETS_ROOT}/prometheus_prometheus_password"
+  tls_config:
+    ca_file: /etc/ssl/certs/prometheusca.crt
+  static_configs:
+  - targets: ["${HOSTNAME}:9090"]

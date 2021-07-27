@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+log "Checking if $(basename $0) is healthy ..."
+curl --output /dev/null --silent --write-out '%{http_code}\n' https://$(hostname):9090/-/healthy | grep 200
