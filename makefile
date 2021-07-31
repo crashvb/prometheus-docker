@@ -20,6 +20,16 @@ debug:
 		$(registry)$(namespace)/$(image):$(tag) \
 		$(ARGS)
 
+grafana:
+	docker run \
+		--detach=true \
+		--hostname=$(name)-grafana \
+		--name=$(name)-grafana \
+		--rm=true \
+		$(grafanarunargs) \
+		grafana/grafana:$(grafanatag) \
+		$(ARGS)
+
 logs:
 	docker logs --follow=true $(ARGS) $(name)
 
