@@ -1,2 +1,2 @@
-makefile.config.local
-superadmin.p12
+*.local
+*.swp
