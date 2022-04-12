@@ -1,5 +1,10 @@
 # prometheus-docker
 
+[![version)](https://img.shields.io/docker/v/crashvb/prometheus/latest)](https://hub.docker.com/repository/docker/crashvb/prometheus)
+[![image size](https://img.shields.io/docker/image-size/crashvb/prometheus/latest)](https://hub.docker.com/repository/docker/crashvb/prometheus)
+[![linting](https://img.shields.io/badge/linting-hadolint-yellow)](https://github.com/hadolint/hadolint)
+[![license](https://img.shields.io/github/license/crashvb/prometheus-docker.svg)](https://github.com/crashvb/prometheus-docker/blob/master/LICENSE.md)
+
 ## Overview
 
 This docker image contains [prometheus](https://prometheus.io/).
@@ -14,12 +19,12 @@ The embedded entrypoint script is located at `/etc/entrypoint.d/prometheus` and 
 
  | Variable | Default Value | Description |
  | ---------| ------------- | ----------- |
- | PROMETHEUS_CERT_DAYS | 30 | Validity period of any generated PKI certificates. |
- | PROMETHEUS_GID | 10000 | Group ID of the virtual mail user. |
- | PROMETHEUS_KEY_SIZE | 4096 | Key size of any generated PKI keys. |
- | PROMETHEUS_NAME | prometheus | Name of the prometheus user. |
- | PROMETHEUS_UID | 10000 | User ID of the prometheus user. |
- | PROMETHEUS_USERS| admin,prometheus | The list of users to be allowed access. |
+ | PROMETHEUS\_CERT\_DAYS | 30 | Validity period of any generated PKI certificates. |
+ | PROMETHEUS\_GID | 10000 | Group ID of the virtual mail user. |
+ | PROMETHEUS\_KEY\_SIZE | 4096 | Key size of any generated PKI keys. |
+ | PROMETHEUS\_NAME | prometheus | Name of the prometheus user. |
+ | PROMETHEUS\_UID | 10000 | User ID of the prometheus user. |
+ | PROMETHEUS\_USERS| admin,prometheus | The list of users to be allowed access. |
 
 ## Standard Configuration
 
