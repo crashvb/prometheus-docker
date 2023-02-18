@@ -19,9 +19,7 @@ The embedded entrypoint script is located at `/etc/entrypoint.d/prometheus` and 
 
  | Variable | Default Value | Description |
  | ---------| ------------- | ----------- |
- | PROMETHEUS\_CERT\_DAYS | 30 | Validity period of any generated PKI certificates. |
  | PROMETHEUS\_GID | 10000 | Group ID of the virtual mail user. |
- | PROMETHEUS\_KEY\_SIZE | 4096 | Key size of any generated PKI keys. |
  | PROMETHEUS\_NAME | prometheus | Name of the prometheus user. |
  | PROMETHEUS\_UID | 10000 | User ID of the prometheus user. |
  | PROMETHEUS\_USERS| admin,prometheus | The list of users to be allowed access. |
