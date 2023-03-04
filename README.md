@@ -35,9 +35,12 @@ The embedded entrypoint script is located at `/etc/entrypoint.d/prometheus` and 
 │  │  └─ prometheus
 │  ├─ healthcheck.d/
 │  │  └─ prometheus
-│  └─ prometheus/
-│     ├─ prometheus.yml
-│     └─ web-config.yml
+│  ├─ prometheus/
+│  │  ├─ prometheus.yml
+│  │  └─ web-config.yml
+│  └─ supervisor/
+│     └─ config.d/
+│        └─ prometheus.conf
 ├─ run/
 │  └─ secrets/
 │     ├─ prometheus.crt
