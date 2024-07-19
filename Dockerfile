@@ -1,12 +1,12 @@
-FROM prom/prometheus:v2.28.1@sha256:d0710ff1c7566d1bea025a68eeb066e2d83a55df617f84fbdd4d5c8f585228f2 AS prometheus
+FROM prom/prometheus:v2.53.0@sha256:075b1ba2c4ebb04bc3a6ab86c06ec8d8099f8fda1c96ef6d104d9bb1def1d8bc AS prometheus
 
-FROM crashvb/supervisord:202303031721@sha256:6ff97eeb4fbabda4238c8182076fdbd8302f4df15174216c8f9483f70f163b68
+FROM crashvb/supervisord:202402150134@sha256:c05da5b946d637ee406a2372b8855e1b93ecccee84efd3226c5219430ef020ea
 ARG org_opencontainers_image_created=undefined
 ARG org_opencontainers_image_revision=undefined
 LABEL \
 	org.opencontainers.image.authors="Richard Davis <crashvb@gmail.com>" \
-	org.opencontainers.image.base.digest="sha256:6ff97eeb4fbabda4238c8182076fdbd8302f4df15174216c8f9483f70f163b68" \
-	org.opencontainers.image.base.name="crashvb/supervisord:202303031721" \
+	org.opencontainers.image.base.digest="sha256:c05da5b946d637ee406a2372b8855e1b93ecccee84efd3226c5219430ef020ea" \
+	org.opencontainers.image.base.name="crashvb/supervisord:202402150134" \
 	org.opencontainers.image.created="${org_opencontainers_image_created}" \
 	org.opencontainers.image.description="Image containing prometheus." \
 	org.opencontainers.image.licenses="Apache-2.0" \
