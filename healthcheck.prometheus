@@ -3,5 +3,14 @@
 set -e -o pipefail
 
 log "Checking if $(basename "${0}") is healthy ..."
-curl --output /dev/null --silent --write-out "%{http_code}\n" "https://$(hostname):9090/-/healthy" | grep 200
+curl \
+	--cacert /run/secrets/prometheusca.crt \
+	--cert /run/secrets/prometheus.crt \
+	--key /run/secrets/prometheus.key \
+	--output /dev/null \
+	--silent \
+	--user "prometheus:$(</run/secrets/prometheus_prometheus_password)" \
+	--write-out "%{http_code}\n" \
+	"https://$(hostname):9090/-/healthy" | \
+grep 200
 

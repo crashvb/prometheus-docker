@@ -11,5 +11,8 @@ scrape_configs:
     password_file: "${EP_SECRETS_ROOT}/prometheus_prometheus_password"
   tls_config:
     ca_file: /etc/ssl/certs/prometheusca.crt
+    cert_file: /etc/ssl/certs/prometheus.crt
+    key_file: /etc/ssl/private/prometheus.key
+    min_version: "TLS13"
   static_configs:
   - targets: ["${HOSTNAME}:9090"]
