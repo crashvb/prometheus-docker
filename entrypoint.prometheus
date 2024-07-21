@@ -40,7 +40,7 @@ if [[ ! -e "${EP_RUN}" ]] ; then
 		log "Skipping: web-config.yml ..."
 	fi
 
-	ln --force --symbolic /usr/share/prometheus/console_libraries /usr/share/prometheus/consoles/ /etc/prometheus/
+	ln --force --symbolic /usr/share/prometheus/console_libraries /usr/share/prometheus/consoles /etc/prometheus/
 
 	log "Applying ownership and permissions ..."
 	find "${PROMETHEUS_DATA}" \( \! -user "${PROMETHEUS_NAME}" -o \! -group "${PROMETHEUS_NAME}" \) -exec chown "${PROMETHEUS_NAME}:${PROMETHEUS_NAME}" {} \;
